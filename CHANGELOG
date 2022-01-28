@@ -1,0 +1,41 @@
+Changelog:
+
+1/24: Started project. Able to implement grid with borders and rooms present.
+1/25: Implemented corridors that connect rooms. Staircase generation completed as well.
+1/30: Changed corridor generation to make random steps in x and y direction to avoid very linear corridors. Finished project.
+2/5: Started working on file reading and writing. Able to get the home path and switch statements to work.
+2/6: Able to start writing bytes to dungeon file and reading them back and printing them to screen. Got until the staircases and was having trouble with structs. 
+     Changed rooms array to structs and created structs for up and down stairs.
+2/7: Finished hw2. Was able to successfully read and write to dungeon and display the same dungeon repeatedly. Was able to fix structs error by creating a pointer
+     and allocating memory when I was able to find out space required for them. Created new functions to make rooms given dimensions rather than generating them. 
+     Tested Sheaffer's sample files and successfully displayed them all perfectly. 
+2/13: Started HW3. Copied in Sheaffer's dijkstra algorithm and added some structs to help functionality. Was having trouble getting distance maps to generate correctly.
+      Was also having trouble figuring out what to do with the .from parts.
+2/14: Finished HW3. Deleted all .from parts and added parameters to both functions to include pc position, 2d arrays for tunneling and non-tunneling. Change cost calculations
+      for both to 1 + (hardness / 85) and 1. Cleaned up code for readibility's sake. Ran into problem where my graph was printing perfectly close to the PC but was off by a modulus
+      of 1 at the fringe of the graph.
+2/23: Started HW4. Was able to create monster generation as well as displaying the monsters to the dungeon.
+2/25: Changed implementation to include a parallel array of characters so that the dungeon floor is never changed. Started to implement the queue but was confused on implementation.
+2/26: Worked on implementing the heap. Was able to create the working heap that was able to successfully run by comparing the turn values of individual monster's structs. 
+2/27: Finished HW4. Put finishing touches on end-game scenario and heap. Came up with monster movement based on their characteristics. Was able to implement erratic, tunneling, and non-tunneling
+	  behavior.  
+3/4: Started HW5. Able to implement previous homework solution in ncurses. Started to add functionality to pc movement input.
+3/5: Continued with implementing user input keys. Was able to implement all 8 types of character movement and pause movements.
+3/6: Finished all user inputs except for displaying monster list and scrolling capabilities. 
+3/12: Finsihed HW5. Was able to implement displaying and scrolling monster list repeatedly. Fixed bug where turns would be completed by monsters when displaying and escaping from monster list menu. 
+3/20: Started HW6. Ported over all c code to c++ code but was running into the error when using dynamic cast that said 'CXXABI_1.3.9' not found
+3/21: Continued to try to fix the dynamic cast error. Was unable to make any progress
+3/25: Switched implementation of monster array and created a pc class that inserts into the heap separately to remedy the dynamic cast error. Also implemented the fog of war view and added teleportation functionality. Ran into the error of getting a floating point exception when teleporting into rock. 
+3/26: Fixed the floating point exception and added random teleportation functionality to the game. Fixed reading and saving to disc errors that I had commented out when porting rest of project to c++.
+3/27: Cleaned up code and checked game for errors. Added bolded text for displaying the visual 5x5 block. Finished HW6.
+3/31: Started HW7. Was able to read in most fields from text file, leaving out the colors and description. 
+4/1: Continued to work on hw. Was able to implement description. Was running into the issue of pointer not getting correct values from other function. Discovered that it was because c++ pointers behave a little differently than what I thought I was doing. Fixed the issue.
+4/2: Finished HW7. Updated README and CHANGELOG.
+4/9: Started HW8. Able to place monsters and was running into the issue of object pointer array not updating correctly.
+4/10: Finished HW8. Fixed error with object pointer array that was being of scope issues. Added color implementation to all map views. 
+4/14: Started HW9. Added menus and pick up features.
+4/15: Completed rest of command implementation.
+4/16: Added combat and switching of monster positions.
+4/17: Completed HW9. Fixed some errors with switching positions with monsters and pc combat. 
+4/22: Started HW10. Implemented lighting and started with implementing spellbooks.
+4/23: Completed HW10. Added magic combat system that has 3 different spellbooks. Added health and mana generation based on last turn difference. 
